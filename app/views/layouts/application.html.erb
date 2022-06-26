@@ -80,6 +80,9 @@
       </nav>
     </header>
     <main class="mb-auto">
+    <% flash.each do |message_type, message| %>
+      <%= content_tag :div, message, class: "notice pb-16" %>
+    <% end %>
     <%= yield %>
     </main>
     <footer>
